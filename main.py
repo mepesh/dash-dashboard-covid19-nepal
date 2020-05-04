@@ -20,7 +20,8 @@ from plotly.subplots import make_subplots
 # In[2]:
 
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # In[3]:
 
