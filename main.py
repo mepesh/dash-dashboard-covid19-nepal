@@ -21,7 +21,6 @@ from plotly.subplots import make_subplots
 
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server
 
 # In[3]:
 
