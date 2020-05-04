@@ -429,8 +429,6 @@ with open("state-1-districts.geojson") as f:
 with open("nepal-municipalities.geojson") as f:
     geomuni = json.load(f)
 
-cases_plot_data = pd.read_csv("test_data_cases_states.csv")
-
 
 def card_content(code, value):
     card_content = [
