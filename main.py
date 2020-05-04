@@ -20,8 +20,7 @@ from plotly.subplots import make_subplots
 # In[2]:
 
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # In[3]:
 
@@ -946,9 +945,11 @@ app.layout = dbc.Container(
                             href="https://m.me/coronanepal2020",
                             target="_blank",
                         ),
-                        html.I(
-                            "Nepali News, Stats, Facts, Quizzles and Everything you need to know as it happens right into your messenger"
+                        html.Hr(),
+                        html.H5(
+                            "Nepali News, Stats, Facts and Quizzles !"
                         ),
+                        html.I("Everything you need to know as it happens right into your messenger"),
                     ],
                     md=4,
                 ),
