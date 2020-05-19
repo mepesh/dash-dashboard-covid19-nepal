@@ -977,6 +977,7 @@ app.layout = dbc.Container(
     [dash.dependencies.Input("in-11-dropdown", "value")],
 )
 def update_output(value):
+    create_covid_df()
     co = country_wise_summary(value)
 
     return (co.iloc[0]["Confirmed"], co.iloc[0]["Recovered"], co.iloc[0]["Deaths"])
