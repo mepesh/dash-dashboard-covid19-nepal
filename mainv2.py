@@ -27,6 +27,9 @@ server = app.server
 # fetching DF
 # loading data right from the source:
 # create covid_df
+covid_api = "https://data.nepalcorona.info/api/v1/covid"
+covid_response = requests.get(covid_api)
+covid = json.loads(covid_response.text)
 
 dis_df = pd.DataFrame(columns=["dis_code", "dis_en"])
 url_dis = "https://data.nepalcorona.info/api/v1/districts"
@@ -73,9 +76,9 @@ def get_name_type(code):
 
 
 def create_covid_df():
-    covid_api = "https://data.nepalcorona.info/api/v1/covid"
-    covid_response = requests.get(covid_api)
-    covid = json.loads(covid_response.text)
+    # covid_api = "https://data.nepalcorona.info/api/v1/covid"
+    # covid_response = requests.get(covid_api)
+    # covid = json.loads(covid_response.text)
     covid_df = pd.DataFrame(
         columns=[
             "provience",
