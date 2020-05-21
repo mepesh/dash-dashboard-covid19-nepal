@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:5000 wsgi:app
+web: gunicorn --workers 3 -m 007 wsgi:app
